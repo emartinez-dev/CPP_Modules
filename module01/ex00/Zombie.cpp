@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:15:26 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/02 12:10:44 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/02 12:16:32 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
-	std::cout << "[DEBUG]: zombie destroyed: ";
-	std::cout << this->_name << std::endl;
+	std::cout << "\x1b[33m[DEBUG]: zombie destroyed: ";
+	std::cout << this->_name << std::endl << "\x1b[0m";
 }
 
 void	Zombie::announce( void )

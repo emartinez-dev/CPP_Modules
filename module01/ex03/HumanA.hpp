@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:15:38 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/02 17:47:34 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/03 10:37:57 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class HumanA
 {
 	private:
 		std::string	_name;
-		Weapon		*_weapon;
+		Weapon		&_weapon;
 	public:
 		HumanA( std::string name, Weapon &weapon );
 		~HumanA();

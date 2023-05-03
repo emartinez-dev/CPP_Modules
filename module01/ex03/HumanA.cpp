@@ -6,14 +6,14 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:15:26 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/02 17:56:54 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/03 10:40:31 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 HumanA::HumanA( std::string name, Weapon &weapon ) :\
-	 _name(name), _weapon(&weapon)
+	 _name(name), _weapon(weapon)
 {
 }
 
@@ -23,13 +23,13 @@ HumanA::~HumanA()
 
 void	HumanA::attack( void )
 {
-	if (!this->_weapon)
+	if (this->_weapon.getType().empty())
 	{
 		std::cerr << this->_name << " has no weapon, can't attack" << std::endl;
 		return ;
 	}
 	std::cout << this->_name << " attacks with their " \
-		<< this->_weapon->getType() << std::endl;
+		<< this->_weapon.getType() << std::endl;
 }
 
 void	HumanA::setWeapon(Weapon &weapon)
@@ -39,5 +39,5 @@ void	HumanA::setWeapon(Weapon &weapon)
 		std::cerr << "New weapon can't be empty" << std::endl;
 		return ;
 	}
-	this->_weapon = &weapon;
+	this->_weapon = weapon;
 }

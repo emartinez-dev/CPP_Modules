@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 15:30:23 by franmart          #+#    #+#              #
-#    Updated: 2023/05/03 12:45:21 by franmart         ###   ########.fr        #
+#    Updated: 2023/05/04 14:49:11 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ INCLUDES	=	sed2.hpp
 
 
 SRCS		=	main.cpp\
-				utils.cpp
+				sed2.cpp
 
 SRC 		= ${addprefix ${SRCSDIR}, ${SRCS}}
 OBJ 		= ${SRC:.cpp=.o}

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:08:53 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/03 12:49:09 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/04 15:17:23 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	main(int argc, char **argv)
 	std::string		filename;
 	std::string		find;
 	std::string		replace;
-	std::fstream	infile;
-	std::fstream	outfile;
+	std::ifstream	infile;
+	std::ofstream	outfile;
 
 	if (argc != 4)
 		return (std::cout << ERROR_ARGS, 1);
@@ -31,10 +31,8 @@ int	main(int argc, char **argv)
 	outfile.open(filename + ".replace", std::ios::out);
 	if (!outfile)
 		return (std::cout << ERROR_OUTFILE, 1);
-	/* replace text magic goes here*/
+	sed_is_for_losers(&infile, &outfile, &find, &replace);
 	infile.close();
 	outfile.close();
-	std::cout << "Params: " << "\nfile -> " + filename << "\nfind -> " + find \
-		<< "\nreplace -> " + replace << std::endl;
 	return (0);
 }

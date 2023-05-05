@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:33:19 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/04 15:18:38 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/05 11:14:30 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # define READ_MODE 1
 # define WRITE_MODE 2
 
-bool	sed_is_for_losers(std::ifstream *infile, std::ofstream *outfile, \
+void	sed_is_for_losers(std::ifstream *infile, std::ofstream *outfile, \
 							std::string *find, std::string *replace);
 
 #endif

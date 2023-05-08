@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 10:15:38 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/02 17:39:25 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/08 10:35:49 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <iostream>
 # include "Weapon.hpp"
+
+/* Here we use a pointer to the weapon as HumanB can have a weapon or not, so
+it can be NULL */
 
 class HumanB
 {

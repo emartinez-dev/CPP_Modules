@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 15:30:23 by franmart          #+#    #+#              #
-#    Updated: 2023/05/08 10:18:28 by franmart         ###   ########.fr        #
+#    Updated: 2023/05/08 15:12:10 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,6 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++98
 RM 			= rm -rf
 
 SRCSDIR		= ./
-INCLUDES	= 	Zombie.hpp
-
 
 SRCS		=	Fixed.cpp\
 				main.cpp

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:16:39 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/08 12:39:55 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:08:22 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <cmath>
-#include <ostream>
+# include <ostream>
 
 class Fixed
 {

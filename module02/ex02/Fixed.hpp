@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:16:39 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/08 17:03:36 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:06:01 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,12 @@ class Fixed
 		Fixed	operator++( void );
 		Fixed	operator--( int );
 		Fixed	operator--( void );
-		friend std::ostream& operator <<(std::ostream& os, const Fixed& number);
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
 		float	toFloat( void ) const;
 		int		toInt( void ) const;
  };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& number);
 
 #endif

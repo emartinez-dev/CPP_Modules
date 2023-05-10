@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:17:13 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/08 15:05:20 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:03:55 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,7 @@ int	Fixed::toInt( void ) const
 	return (this->_value / (1 << Fixed::_fractional_bits));
 }
 
-
-std::ostream& operator <<(std::ostream& os, const Fixed& number)
+std::ostream& operator<<(std::ostream& os, const Fixed& number)
 {
 	os << number.toFloat();
 	return os;

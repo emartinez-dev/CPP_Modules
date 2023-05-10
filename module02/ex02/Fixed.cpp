@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:17:13 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/10 13:06:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:24:38 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,4 +167,53 @@ std::ostream& operator<<(std::ostream& os, const Fixed& number)
 {
 	os << number.toFloat();
 	return os;
+}
+
+
+Fixed const &Fixed::min(Fixed const &f1, Fixed const &f2)
+{
+	if (f1.getRawBits() > f2.getRawBits())
+		return (f2);
+	return (f1);
+}
+
+Fixed& Fixed::min(Fixed &f1, Fixed &f2)
+{
+	if (f1.getRawBits() > f2.getRawBits())
+		return (f2);
+	return (f1);
+}
+
+Fixed const &min(Fixed const &f1, Fixed const &f2)
+{
+	return (Fixed::min(f1, f2));
+}
+
+Fixed &min(Fixed &f1, Fixed &f2)
+{
+	return (Fixed::min(f1, f2));
+}
+
+Fixed const &Fixed::max(Fixed const &f1, Fixed const &f2)
+{
+	if (f1.getRawBits() > f2.getRawBits())
+		return (f1);
+	return (f2);
+}
+
+Fixed& Fixed::max(Fixed &f1, Fixed &f2)
+{
+	if (f1.getRawBits() > f2.getRawBits())
+		return (f1);
+	return (f2);
+}
+
+Fixed const &max(Fixed const &f1, Fixed const &f2)
+{
+	return (Fixed::max(f1, f2));
+}
+
+Fixed &max(Fixed &f1, Fixed &f2)
+{
+	return (Fixed::max(f1, f2));
 }

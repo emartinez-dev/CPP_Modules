@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:17:13 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/10 13:24:38 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/18 18:48:36 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,6 @@ std::ostream& operator<<(std::ostream& os, const Fixed& number)
 	os << number.toFloat();
 	return os;
 }
-
 
 Fixed const &Fixed::min(Fixed const &f1, Fixed const &f2)
 {

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:41:18 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/10 14:40:56 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/18 18:54:17 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,5 @@ Fixed Point::getY(void) const
 
 Point	&Point::operator=(const Point &copy)
 {
-	if (this != &copy)
-  {
-  }
 	return (*this);
 }

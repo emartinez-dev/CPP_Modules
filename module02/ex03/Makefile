@@ -6,11 +6,11 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/20 15:30:23 by franmart          #+#    #+#              #
-#    Updated: 2023/05/08 15:12:17 by franmart         ###   ########.fr        #
+#    Updated: 2023/05/18 18:43:11 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= fixed
+NAME		= bsp
 
 CC			= clang++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
@@ -19,7 +19,9 @@ RM 			= rm -rf
 SRCSDIR		= ./
 
 SRCS		=	Fixed.cpp\
-				main.cpp
+				main.cpp\
+				Point.cpp\
+				bsp.cpp
 
 SRC 		= ${addprefix ${SRCSDIR}, ${SRCS}}
 OBJ 		= ${SRC:.cpp=.o}

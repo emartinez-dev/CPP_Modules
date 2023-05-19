@@ -6,37 +6,36 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:03:55 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/18 18:30:46 by franmart         ###   ########.fr       */
+/*   Updated: 2023/05/19 11:47:42 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include "Point.hpp"
-#include <cmath>
+
+/* Different implementation: the barycentric coordinates method!
+reference: https://www.baeldung.com/cs/check-if-point-is-in-2d-triangle
+*/
+
+Fixed	triangle_area(Point const a, Point const b, Point const c)
+{
+	Fixed	area;
+	Point	ab(b.getX().toFloat() - a.getX().toFloat(), \
+		b.getY().toFloat() - a.getY().toFloat());
+	Point	ac(c.getX().toFloat() - a.getX().toFloat(), \
+		c.getY().toFloat() - a.getY().toFloat());
+	return Fixed(0.5f * (ab.getX().toFloat() * ac.getY().toFloat() - \
+		ab.getY().toFloat() * ac.getX().toFloat()));
+}
 
 bool bsp(Point const a, Point const b, Point const c, Point const point)
 {
-	Point	list[3];
-	Fixed	minX(MAXFLOAT);
-	Fixed	maxX(INFINITY);
-	Fixed	minY(MAXFLOAT);
-	Fixed	maxY(INFINITY);
-	Fixed	pointX;
-	Fixed	pointY;
+	Fixed	area_abc;
+	Fixed	area_sum(0.0f);
 
-	list[0] = a;
-	list[1] = b;
-	list[2] = c;
-	for (int i = 0; i < 3; i++)
-	{
-		minX = Fixed::min(list[i].getX(), minX);
-		minY = Fixed::min(list[i].getY(), minY);
-		maxX = Fixed::max(list[i].getX(), maxX);
-		maxY = Fixed::max(list[i].getY(), maxY);
-	}
-	pointX = point.getX();
-	pointY = point.getY();
-	if (pointX < minX || pointX > maxX || pointY < minY || pointY > maxY)
-		return false;
-	return true;
+	area_abc = triangle_area(a, b, c);
+	area_sum = area_sum + triangle_area(a, b, point);
+	area_sum = area_sum + triangle_area(a, c, point);
+	area_sum = area_sum + triangle_area(b, c, point);
+	return (area_sum == area_abc);
 }

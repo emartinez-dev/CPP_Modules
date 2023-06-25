@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:48:05 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 12:52:10 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/25 15:06:52 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;
 		unsigned int	_energyPoints;

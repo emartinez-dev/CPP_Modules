@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 11:14:52 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 16:14:33 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/25 15:16:00 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ int	main(void)
 	trap.getAttackDamage();
 	trap.attack("Bar");
 	trap.whoAmI();
+	trap.guardGate();
+	trap.highFivesGuys();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:16:29 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/31 12:47:24 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 12:38:40 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,16 +64,12 @@ void Character::equip(AMateria *m)
 	this->equiped++;
 }
 
-/* I have decided to delete AMaterias in the moment they get unequiped, as they
-are skills that a Character can use and not items that can drop on the floor. */
-
 void Character::unequip(int idx)
 {
 	if (idx < 0 || this->equiped <= idx)
 		return ;
 	for (int i = idx; i < 3; i++)
 	{
-		delete this->slots[i];
 		this->slots[i] = this->slots[i + 1];
 		this->slots[i + 1] = nullptr;
 	}

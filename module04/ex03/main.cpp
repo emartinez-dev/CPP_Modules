@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:52:10 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/31 12:44:29 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 12:46:16 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,25 +34,36 @@ int	main(void)
 	src->learnMateria(new Cure());
 
 	ICharacter *me = new Character("me");
-	AMateria *tmp;
+	AMateria *ice;
+	AMateria *cure;
 
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
+	ice = src->createMateria("ice");
+	me->equip(ice);
 
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	cure = src->createMateria("cure");
+	me->equip(cure);
 
 	ICharacter *bob = new Character("bob");
 
 	me->use(0, *bob);
 	me->use(1, *bob);
 
+	std::cout << "\n\nTesting unequiping a materia and using it:\n\n";
+
+	me->unequip(2);
+	me->unequip(1);
+	me->unequip(0);
+	me->use(0, *bob);
+
+	delete ice;
+	delete cure;
 	delete bob;
 	delete me;
 	delete src;
 
 	std::cout << "\n\nTesting not learning a materia an using it:\n\n";
 	IMateriaSource *noIce = new MateriaSource();
+	AMateria *tmp;
 
 	noIce->learnMateria(new Cure());
 	tmp = noIce->createMateria("ice");

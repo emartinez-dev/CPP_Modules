@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:13:52 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 16:01:41 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:32:28 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,4 @@ Animal	&Animal::operator=(const Animal &copy)
 std::string	Animal::getType() const
 {
 	return (this->type);
-}
-
-void	Animal::makeSound() const
-{
-	if (this->getType() == "Animal")
-		std::cout << "[ Unrecognized animal sound ]" << std::endl;
-	if (this->getType() == "Dog")
-		std::cout << "[ Woof woof! ]" << std::endl;
-	if (this->getType() == "Cat")
-		std::cout << "[ Meooooooooow ]" << std::endl;
 }

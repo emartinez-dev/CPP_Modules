@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:12:10 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 16:00:15 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:35:07 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ class Animal
 {
 	protected:
 		std::string	type;
+	public:
 		Animal();
+		virtual ~Animal();
 		Animal(Animal const &copy);
 		Animal	&operator=(Animal const &copy);
-	public:
-		virtual ~Animal();
 		std::string	getType() const;
-		void		makeSound() const;
+		virtual void	makeSound() const = 0;
 };
 
 #endif

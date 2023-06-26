@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:29:22 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 16:01:55 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:07:24 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ Cat	&Cat::operator=(const Cat &copy)
 		this->brain = new Brain(*copy.brain);
 	}
 	return (*this);
+}
+
+void Cat::makeSound() const 
+{
+	std::cout << "[ Meooooooooow ]" << std::endl;
 }

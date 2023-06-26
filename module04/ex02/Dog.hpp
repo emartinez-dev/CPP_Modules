@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:21:54 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 12:57:36 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:08:28 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Dog: public Animal
 		~Dog();
 		Dog(Dog const &copy);
 		Dog	&operator=(Dog const &copy);
+		void makeSound(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:49:36 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:52:36 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:02:42 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class WrongCat: public WrongAnimal
 		~WrongCat();
 		WrongCat(WrongCat const &copy);
 		WrongCat	&operator=(WrongCat const &copy);
+		void	makeSound() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:46:45 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:48:56 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:00:06 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,5 @@ std::string	WrongAnimal::getType() const
 
 void	WrongAnimal::makeSound() const
 {
-	if (this->getType() == "WrongAnimal")
-		std::cout << "[ Wrong animal sound ]" << std::endl;
-	if (this->getType() == "WrongCat")
-		std::cout << "[ Wroooooooooong ]" << std::endl;
+	std::cout << "[ Wrong animal sound ]" << std::endl;
 }

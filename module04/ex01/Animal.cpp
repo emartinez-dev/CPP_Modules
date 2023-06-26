@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:13:52 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 15:09:32 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:06:49 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,5 @@ std::string	Animal::getType() const
 
 void	Animal::makeSound() const
 {
-	if (this->getType() == "Animal")
-		std::cout << "[ Unrecognized animal sound ]" << std::endl;
-	if (this->getType() == "Dog")
-		std::cout << "[ Woof woof! ]" << std::endl;
-	if (this->getType() == "Cat")
-		std::cout << "[ Meooooooooow ]" << std::endl;
+	std::cout << "[ Unrecognized animal sound ]" << std::endl;
 }

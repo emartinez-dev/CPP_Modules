@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:22:20 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 15:46:14 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 11:08:38 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ Dog	&Dog::operator=(const Dog &copy)
 		this->brain = new Brain(*copy.brain);
 	}
 	return (*this);
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "[ Woof woof! ]" << std::endl;
 }

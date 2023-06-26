@@ -26,3 +26,8 @@ WrongCat	&WrongCat::operator=(const WrongCat &copy)
 		this->type = copy.getType();
 	return (*this);
 }
+
+void	WrongCat::makeSound() const
+{
+	std::cout << "[ WrongCat sound ]" << std::endl;
+}

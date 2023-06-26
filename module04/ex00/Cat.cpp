@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:29:22 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:31:51 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:43:20 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,9 @@ Cat	&Cat::operator=(const Cat &copy)
 	if (this != &copy)
 		this->type = copy.getType();
 	return (*this);
+}
+
+void Cat::makeSound() const 
+{
+	std::cout << "[ Meooooooooow ]" << std::endl;
 }

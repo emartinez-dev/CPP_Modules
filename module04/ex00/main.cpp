@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:19:31 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:55:52 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:56:27 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main()
 {
 	std::cout << "----------- Constructor tests -----------" << "\n\n";
 	std::cout << "---- Animal constructor ----" << std::endl;
-	const Animal *meta = new Animal();
+	const Animal meta = Animal();
 	std::cout << "\n----- Dog constructor <j> ------" << std::endl;
 	const Animal	*j = new Dog();
 	std::cout << "\n----- Cat constructor <i> ------" << std::endl;
@@ -33,7 +33,7 @@ int	main()
 	std::cout << "\n----------- Sound tests -----------\n";
 	i->makeSound();
 	j->makeSound();
-	meta->makeSound();
+	meta.makeSound();
 
 	std::cout << "\n\n----------- WrongAnimal tests -----------" << "\n\n";
 	std::cout << "---- WrongAnimal constructor ----" << std::endl;
@@ -49,7 +49,6 @@ int	main()
 	metaWrong->makeSound();
 
 	std::cout << "\n\n----------- Destroy everything -----------" << "\n\n";
-	delete meta;
 	delete i;
 	delete j;
 	delete k;

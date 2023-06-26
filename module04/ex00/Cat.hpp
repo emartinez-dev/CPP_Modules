@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:29:52 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:31:21 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:42:46 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Cat: public Animal
 		~Cat();
 		Cat(Cat const &copy);
 		Cat	&operator=(Cat const &copy);
+		void makeSound() const;
 };
 
 #endif

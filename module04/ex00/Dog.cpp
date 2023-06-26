@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:22:20 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 11:30:38 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/26 10:44:00 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,9 @@ Dog	&Dog::operator=(const Dog &copy)
 	if (this != &copy)
 		this->type = copy.getType();
 	return (*this);
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "[ Woof woof! ]" << std::endl;
 }

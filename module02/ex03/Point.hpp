@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:40:56 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/18 18:51:38 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:57:53 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ class Point
     Fixed getX( void ) const;
     Fixed getY( void ) const;
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

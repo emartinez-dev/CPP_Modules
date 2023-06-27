@@ -6,11 +6,11 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:15:15 by franmart          #+#    #+#             */
-/*   Updated: 2023/06/25 14:59:58 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:58:14 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bsp.hpp"
+#include "Point.hpp"
 
 /* Tool to represent points online: https://www.geogebra.org/graphing */
 

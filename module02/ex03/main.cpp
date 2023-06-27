@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 10:15:15 by franmart          #+#    #+#             */
-/*   Updated: 2023/06/27 11:58:14 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/27 12:02:34 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	Point	b(5.0f, 0.0f);
 	Point	c(2.5f, 2.5f);
 	Point	inside(1.0f, 0.5f);
-	Point	outside(1.0f, 2.0f);
+	Point	outside(0.0f, 0.0f);
 
 	std::cout << "Triangle vertices:" << std::endl;
 	std::cout << "a) x:" << a.getX() << " y:" << a.getY() << std::endl;

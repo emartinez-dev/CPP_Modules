@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:03:55 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/19 13:36:54 by franmart         ###   ########.fr       */
+/*   Updated: 2023/06/27 12:00:57 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ bool	bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed	area_abc(triangle_area(a, b, c));
 	Fixed	area_sum(0.0f);
 
+	if (triangle_area(a, b, point) == 0 || triangle_area(a, c, point) == 0 \
+			|| triangle_area(b, c, point) == 0)
+		return (false);
 	area_sum = area_sum + triangle_area(a, b, point);
 	area_sum = area_sum + triangle_area(a, c, point);
 	area_sum = area_sum + triangle_area(b, c, point);

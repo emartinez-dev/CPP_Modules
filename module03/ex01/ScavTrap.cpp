@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 12:11:12 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 09:06:36 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 18:05:51 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,28 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
-{
-}
-
-ScavTrap	&ScavTrap::operator=(const ScavTrap &copy)
+ScavTrap::ScavTrap(ScavTrap const &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	if (this != &copy)
 	{
-		ClapTrap::operator=(copy);
+		this->_attackDamage = copy.getAttackDamage();
+		this->_energyPoints = copy.getEnergyPoints();
+		this->_hitPoints = copy.getHitPoints();
+	}
+}
+
+ScavTrap	&ScavTrap::operator=(const ScavTrap &copy)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &copy)
+	{
+		this->_attackDamage = copy.getAttackDamage();
+		this->_energyPoints = copy.getEnergyPoints();
+		this->_hitPoints = copy.getHitPoints();
 	}
 	return (*this);
+
 }
 
 void	ScavTrap::guardGate()

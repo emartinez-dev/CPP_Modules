@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:47:59 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 09:46:07 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 18:06:28 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 	std::cout << "Copy constructor called" << std::endl;
 	if (this != &copy)
 	{
+		this->_name = copy.getName();
 		this->_attackDamage = copy.getAttackDamage();
 		this->_energyPoints = copy.getEnergyPoints();
 		this->_hitPoints = copy.getHitPoints();
@@ -45,6 +46,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy)
 	{
+		this->_name = copy.getName();
 		this->_attackDamage = copy.getAttackDamage();
 		this->_energyPoints = copy.getEnergyPoints();
 		this->_hitPoints = copy.getHitPoints();

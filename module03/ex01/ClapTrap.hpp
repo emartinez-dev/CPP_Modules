@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:48:05 by franmart          #+#    #+#             */
-/*   Updated: 2023/06/25 15:06:52 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:23:00 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <iostream>
 # include <string>
+
+/* ClapTrap attributes are now protected, so they are accesible from the class
+that defines them and classes that inherit from that class. If they were private
+they would only be accesible from itself */
 
 class ClapTrap
 {

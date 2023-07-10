@@ -6,21 +6,20 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:47:59 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 09:00:41 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:07:45 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap():_hitPoints(0), _energyPoints(10), _attackDamage(10), \
-	_classname("ClapTrap")
+ClapTrap::ClapTrap():_hitPoints(0), _energyPoints(10), _attackDamage(10)
 {
 	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
 
 ClapTrap::ClapTrap(std::string const &name):_name(name), _hitPoints(10),\
-	_energyPoints(10), _attackDamage(0), _classname("ClapTrap")
+	_energyPoints(10), _attackDamage(0)
 {
 	std::cout << "ClapTrap constructor called" << std::endl;
 }
@@ -108,14 +107,14 @@ void	ClapTrap::attack(const std::string &target)
 		return;
 	}
 	this->_energyPoints--;
-	std::cout << this->getClassname() << " " << this->_name << " attacks " << \
+	std::cout << "ClapTrap " << this->_name << " attacks " << \
 		target << ", causing " << this->_attackDamage << " points of damage!\n";
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	this->_hitPoints -= amount;
-	std::cout << this->getClassname() << " " << this->_name << " was attacked"\
+	std::cout << "ClapTrap " << this->_name << " was attacked"\
 		", receiving " << amount << " points of damage!" << std::endl;
 }
 
@@ -128,7 +127,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	this->_energyPoints--;
 	this->_hitPoints += amount;
-	std::cout << this->getClassname() << " " << this->_name << " was repaired "\
+	std::cout << "ClapTrap " << this->_name << " was repaired "\
 		<< amount << " points of HP, it now has " << this->_hitPoints \
 		<< " points." << std::endl;
 }

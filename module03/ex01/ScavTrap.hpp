@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 12:08:10 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 12:41:31 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:05:39 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ScavTrap: public ClapTrap
 		ScavTrap(ScavTrap const &copy);
 		ScavTrap	&operator=(ScavTrap const &copy);
 		void	guardGate();
+		void	attack(const std::string &target);
 };
 
 #endif

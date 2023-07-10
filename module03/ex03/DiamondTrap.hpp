@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 14:21:09 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 16:19:14 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:42:55 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,12 @@ class DiamondTrap: public ScavTrap, public FragTrap
 {
 	private:
 		std::string _name;
-		std::string _name_private;
 	public:
 		DiamondTrap();
 		DiamondTrap(std::string name);
 		~DiamondTrap();
 		DiamondTrap(DiamondTrap const &copy);
 		DiamondTrap	&operator=(DiamondTrap const &copy);
-		void	attack(std::string name);
 		void	whoAmI();
 };
 

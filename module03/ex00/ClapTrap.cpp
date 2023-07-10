@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:47:59 by franmart          #+#    #+#             */
-/*   Updated: 2023/06/25 15:03:53 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 08:58:38 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "No energy points left, can't be repaired!" << std::endl;
 		return;
 	}
+	this->_energyPoints--;
 	this->_hitPoints += amount;
 	std::cout << "ClapTrap " << this->_name << " was repaired " << amount << \
 		" points of HP, it now has " << this->_hitPoints << " points." << std::endl;

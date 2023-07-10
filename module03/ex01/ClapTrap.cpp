@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:47:59 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 09:07:45 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:46:07 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 		this->_attackDamage = copy.getAttackDamage();
 		this->_energyPoints = copy.getEnergyPoints();
 		this->_hitPoints = copy.getHitPoints();
-		this->_classname = copy.getClassname();
 	}
 }
 
@@ -49,7 +48,6 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
 		this->_attackDamage = copy.getAttackDamage();
 		this->_energyPoints = copy.getEnergyPoints();
 		this->_hitPoints = copy.getHitPoints();
-		this->_classname = copy.getClassname();
 	}
 	return (*this);
 }
@@ -67,11 +65,6 @@ void	ClapTrap::setEnergyPoints(unsigned int amount)
 void	ClapTrap::setAttackDamage(unsigned int amount)
 {
 	this->_attackDamage = amount;
-}
-
-void	ClapTrap::setClassname(std::string classname)
-{
-	this->_classname = classname;
 }
 
 unsigned int	ClapTrap::getHitPoints() const
@@ -92,11 +85,6 @@ unsigned int	ClapTrap::getAttackDamage() const
 std::string		ClapTrap::getName() const
 {
 	return this->_name;
-}
-
-std::string		ClapTrap::getClassname() const
-{
-	return this->_classname;
 }
 
 void	ClapTrap::attack(const std::string &target)

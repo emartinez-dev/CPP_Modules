@@ -6,13 +6,14 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 12:08:10 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 16:19:22 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:37:57 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
+# include <iostream>
 # include "ClapTrap.hpp"
 
 class ScavTrap: virtual public ClapTrap
@@ -24,6 +25,7 @@ class ScavTrap: virtual public ClapTrap
 		ScavTrap(ScavTrap const &copy);
 		ScavTrap	&operator=(ScavTrap const &copy);
 		void	guardGate();
+		void	attack(const std::string &target);
 };
 
 #endif

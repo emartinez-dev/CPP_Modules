@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 12:11:12 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 16:15:43 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:06:36 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ ScavTrap::ScavTrap(): ClapTrap()
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);
-	this->setClassname("ScavTrap");
 }
 
 ScavTrap::ScavTrap(std::string name):ClapTrap(name)
@@ -28,7 +27,6 @@ ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);
-	this->setClassname("ScavTrap");
 }
 
 ScavTrap::~ScavTrap()
@@ -52,6 +50,18 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &copy)
 
 void	ScavTrap::guardGate()
 {
-	std::cout << this->getClassname() << " " << this->getName() \
+	std::cout << "ScavTrap " << this->getName() \
 		<< " is now in Gate keeper mode\n";
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (this->getEnergyPoints() == 0)
+	{
+		std::cout << "No energy points left, can't attack!" << std::endl;
+		return;
+	}
+	this->_energyPoints--;
+	std::cout << "ScavTrap " << this->_name << " attacks " << \
+		target << ", causing " << this->_attackDamage << " points of damage!\n";
 }

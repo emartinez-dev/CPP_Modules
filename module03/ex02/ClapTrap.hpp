@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 10:48:05 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/22 12:52:10 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/10 09:46:30 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,17 @@
 # include <iostream>
 # include <string>
 
+/* ClapTrap attributes are now protected, so they are accesible from the class
+that defines them and classes that inherit from that class. If they were private
+they would only be accesible from itself */
+
 class ClapTrap
 {
-	private:
+	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;
 		unsigned int	_energyPoints;
 		unsigned int	_attackDamage;
-		std::string		_classname;
 	public:
 		ClapTrap();
 		ClapTrap(std::string const &name);
@@ -36,12 +39,10 @@ class ClapTrap
 		void	setHitPoints(unsigned int amount);
 		void	setEnergyPoints(unsigned int amount);
 		void	setAttackDamage(unsigned int amount);
-		void	setClassname(std::string classname);
 		unsigned int	getHitPoints() const;
 		unsigned int	getEnergyPoints() const;
 		unsigned int	getAttackDamage() const;
 		std::string		getName() const;
-		std::string		getClassname() const;
 };
 
 #endif

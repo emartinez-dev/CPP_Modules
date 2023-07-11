@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 14:07:03 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 18:07:18 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/11 12:30:51 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap destructor called" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &copy): ClapTrap(copy)
+FragTrap::FragTrap(FragTrap const &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	if (this != &copy)

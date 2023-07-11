@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 11:14:52 by franmart          #+#    #+#             */
-/*   Updated: 2023/07/10 17:57:19 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/11 12:05:52 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	main(void)
 {
 	DiamondTrap	trap("Foo");
 
+	std::cout << "Attack damage: " << trap.getAttackDamage() << "\nHP: " << \
+		trap.getHitPoints() << "\nEP: " << trap.getEnergyPoints() << std::endl;
 	trap.attack("Bar");
 	trap.whoAmI();
 	trap.guardGate();

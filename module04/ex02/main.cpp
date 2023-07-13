@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:19:31 by franmart          #+#    #+#             */
-/*   Updated: 2023/05/23 16:01:31 by franmart         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:50:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,11 @@ int	main()
 
 	std::cout << "\nDog[1] gets removed\n";
 	delete dogs[1];
+
+	//std::cout << "\nTrying to instantiate the abstract animal class:\n";
+	//Animal perro;
+
 	return (0);
+
+
 }

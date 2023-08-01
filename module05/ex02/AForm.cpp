@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 10:27:01 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/01 18:56:06 by franmart         ###   ########.fr       */
+/*   Updated: 2023/08/01 19:13:32 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ std::string	  AForm::getTarget(void) const
 void  AForm::beSigned(Bureaucrat &B)
 {
 	if (B.getGrade() > this->getGradeSign())
-		throw GradeTooLowException();
+		throw NotEnoughGrade();
 	else
 		this->_signed = true;
 }

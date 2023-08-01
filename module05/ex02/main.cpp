@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 11:08:50 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/01 18:57:40 by franmart         ###   ########.fr       */
+/*   Updated: 2023/08/01 19:14:57 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,38 @@ int main (void)
 	AForm *FormB = new RobotomyRequestForm("Bender");
 	AForm *FormC = new PresidentialPardonForm("Rick");
 	
+	std::cout << "Tested Bureaucrats _________________________________" << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+
+	std::cout << "\nTested forms _____________________________________" << std::endl;
 	std::cout << *FormA << std::endl;
 	std::cout << *FormB << std::endl;
 	std::cout << *FormC << std::endl;
 	
-	a.signForm(*FormA);
+	std::cout << "\nException handling tests _________________________" << std::endl;
+	std::cout << "\nNot enough level to sign:\n";
+	c.signForm(*FormA);
+	std::cout << "Sign form correctly:\n";
+	b.signForm(*FormA);
+	std::cout << "\nSign form twice:\n";
+	b.signForm(*FormA);
+	std::cout << "\nNot enough level to execute:\n";
 	c.executeForm(*FormA);
 
-	a.signForm(*FormB);
-	c.executeForm(*FormB);
-
+	std::cout << "\nTest that all the forms work _____________________" << std::endl;
+	std::cout << "\nSign remaining forms:\n";
+	b.signForm(*FormB);
 	a.signForm(*FormC);
-	c.executeForm(*FormC);
+	std::cout << "\nExecute the remaining forms:\n";
+
+	b.executeForm(*FormA);
+	std::cout << "\n";
+	b.executeForm(*FormB);
+	std::cout << "\n";
+	a.executeForm(*FormC);
+	std::cout << "\n";
 
 	delete FormA;
 	delete FormB;

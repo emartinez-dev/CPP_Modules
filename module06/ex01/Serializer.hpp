@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 11:05:43 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/02 16:09:52 by franmart         ###   ########.fr       */
+/*   Created: 2023/08/02 13:04:41 by franmart          #+#    #+#             */
+/*   Updated: 2023/08/02 13:10:49 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
 
+# include <cstdint>
 # include <iostream>
-# include <string>
+# include <sys/_types/_uintptr_t.h>
+# include "Data.hpp"
 
-class ScalarConverter
+class Serializer
 {
 	private:
-		static char		c;
-		static int		i;
-		static float	f;
-		static double	d;
-		static char		type;
 
 	public:
-		ScalarConverter();
-		~ScalarConverter();
-		ScalarConverter(ScalarConverter const &copy);
-		ScalarConverter	&operator=(ScalarConverter const &copy);
-
-		static void	  convert(std::string const &literal);
-		static char	  getType(std::string const &literal);
+		Serializer();
+		~Serializer();
+		Serializer(Serializer const &copy);
+		Serializer	&operator=(Serializer const &copy);
+		static uintptr_t serialize(Data *ptr);
+		static Data* deserialize(uintptr_t raw);
 };
 
 #endif

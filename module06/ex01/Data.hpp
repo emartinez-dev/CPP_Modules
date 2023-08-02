@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 11:05:43 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/02 16:09:52 by franmart         ###   ########.fr       */
+/*   Created: 2023/08/02 13:11:14 by franmart          #+#    #+#             */
+/*   Updated: 2023/08/02 13:25:39 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#ifndef DATA_HPP
+#define DATA_HPP
 
 # include <iostream>
-# include <string>
 
-class ScalarConverter
+class Data
 {
 	private:
-		static char		c;
-		static int		i;
-		static float	f;
-		static double	d;
-		static char		type;
+		int	_content;
 
 	public:
-		ScalarConverter();
-		~ScalarConverter();
-		ScalarConverter(ScalarConverter const &copy);
-		ScalarConverter	&operator=(ScalarConverter const &copy);
-
-		static void	  convert(std::string const &literal);
-		static char	  getType(std::string const &literal);
+		Data();
+		Data(int content);
+		~Data();
+		Data(Data const &copy);
+		Data	&operator=(Data const &copy);
+		int	getContent(void) const;
 };
 
 #endif
+

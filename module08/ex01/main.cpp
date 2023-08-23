@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 12:16:01 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/23 14:55:46 by franmart         ###   ########.fr       */
+/*   Updated: 2023/08/23 15:17:20 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main(void)
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << "\nGenerating a span with random values _____________\n";
+	std::cout << "\nGenerating a span with random values _____________________\n";
 	srand(time(NULL));
 	Span sp3 = Span(4);
 	sp3.fillRandom();
@@ -51,5 +51,18 @@ int main(void)
 
 	std::cout << "\nShortest span: " << sp3.shortestSpan() << std::endl;
 	std::cout << "Longest span: " << sp3.longestSpan() << std::endl;
+
+	std::cout << "\nGenerating a span with 10.000 random values _____________\n";
+	Span sp4 = Span(10000);
+	sp4.fillRandom();
+	std::cout << "\nShortest span: " << sp4.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << sp4.longestSpan() << std::endl;
+
+	std::cout << "\nGenerating a span with 100.000 random values _____________\n";
+	Span sp5 = Span(100000);
+	sp5.fillRandom();
+	std::cout << "\nShortest span: " << sp5.shortestSpan() << std::endl;
+	std::cout << "Longest span: " << sp5.longestSpan() << std::endl;
+
 	return 0;
 }

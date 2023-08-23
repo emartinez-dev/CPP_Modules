@@ -5,31 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 13:22:53 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/23 09:41:12 by franmart         ###   ########.fr       */
+/*   Created: 2023/08/09 17:09:44 by franmart          #+#    #+#             */
+/*   Updated: 2023/08/09 17:36:04 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Data.hpp"
-#include "Serializer.hpp"
+#include "Base.hpp"
+#include <unistd.h>
+#include <ctime>
+#include <stdlib.h>
 
 int main (void)
 {
-	Data		n(42);	
-	uintptr_t	ptr;
-	Data*		data_ptr;
+	Base	*ptr;
+	Base	*ref;
 
-	std::cout << "Original data pointer: " << &n << std::endl;
-	ptr = Serializer::serialize(&n);
-	std::cout << "Original data content: " << n.getContent() << std::endl;
-
-	std::cout << "Serialized data pointer: " << ptr << std::endl;
-	data_ptr = Serializer::deserialize(ptr);
-
-	std::cout << "Deserialized data pointer: " << data_ptr << std::endl;
-
-	std::cout << "Data after Serializing and deserializing: " \
-		<< data_ptr->getContent() << std::endl;
-
+	srand(time(NULL));	
+	for (int i = 0; i < 5; i++)
+	{
+		ptr = generate();
+		std::cout << "---- Generated new object ----" << std::endl;
+		identify(ptr);
+		delete ptr;
+		std::cout << std::endl;
+	}
+	
+	for (int i = 0; i < 5; i++)
+	{
+		ref = generate();
+		std::cout << "---- Generated new object ----" << std::endl;
+		identify(*ref);
+		delete ref;
+		std::cout << std::endl;
+	}
 	return 0;
 }

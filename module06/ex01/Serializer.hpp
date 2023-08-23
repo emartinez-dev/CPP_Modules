@@ -6,17 +6,23 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:04:41 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/02 13:10:49 by franmart         ###   ########.fr       */
+/*   Updated: 2023/08/23 09:40:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERIALIZER_HPP
 #define SERIALIZER_HPP
 
-# include <cstdint>
+/* Why use reinterpet_cast? 
+ * Because the uintptr_t is the same size than a normal pointer, and it guarantees that
+ * you can cast the value back into its original type, so it's the best for our use
+ *
+ * Reference: https://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-const-cast-and-reinterpret-cast-be-used
+ * */
+
 # include <iostream>
-# include <sys/_types/_uintptr_t.h>
 # include "Data.hpp"
+# include <stdint.h>
 
 class Serializer
 {

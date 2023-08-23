@@ -6,13 +6,12 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:05:03 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/02 13:30:27 by franmart         ###   ########.fr       */
+/*   Updated: 2023/08/23 09:40:41 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
 #include "Data.hpp"
-#include <sys/_types/_uintptr_t.h>
 
 Serializer::Serializer()
 {

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:04:41 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/23 09:40:59 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/01 11:30:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@
 class Serializer
 {
 	private:
-
-	public:
 		Serializer();
 		~Serializer();
 		Serializer(Serializer const &copy);
 		Serializer	&operator=(Serializer const &copy);
+
+	public:
 		static uintptr_t serialize(Data *ptr);
 		static Data* deserialize(uintptr_t raw);
 };

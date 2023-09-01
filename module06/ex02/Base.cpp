@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 16:59:11 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/09 17:35:26 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/01 11:32:47 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
-
-Base::Base()
-{
-}
 
 Base::~Base()
 {

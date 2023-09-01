@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 16:55:19 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/09 17:35:25 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/01 11:32:10 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Base
 	private:
 
 	public:
-		Base();
 		virtual ~Base();
 };
 

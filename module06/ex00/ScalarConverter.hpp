@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:05:43 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/23 09:39:42 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/01 11:29:36 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,18 @@ class ScalarConverter
 		static int		i_err;
 		static int		f_err;
 		static int		d_err;
-
-	public:
 		ScalarConverter();
 		~ScalarConverter();
 		ScalarConverter(ScalarConverter const &copy);
 		ScalarConverter	&operator=(ScalarConverter const &copy);
 
+
+	public:
 		static void	  convert(std::string const &literal);
 		static char	  getType(std::string const &literal);
 		static void	  printResults(void);
 		static void	  checkErrors(void);
+
 };
 
 bool is_number(std::string const &str);

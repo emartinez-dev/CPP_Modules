@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:40:21 by franmart          #+#    #+#             */
-/*   Updated: 2023/08/29 17:30:34 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:07:27 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ float	  getExchangeFromLine(std::string const &line, std::string delimiter)
 
 	numericPart = line.substr(line.find(delimiter) + 1, line.length());
 	try {
-		exchangeRate = std::stof(numericPart);
+		exchangeRate = atof(numericPart.c_str());
 		
 	} catch (std::exception) {
 		exchangeRate = -1.0;

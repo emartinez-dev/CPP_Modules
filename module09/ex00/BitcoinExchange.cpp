@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 11:40:21 by franmart          #+#    #+#             */
-/*   Updated: 2023/09/12 18:07:27 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/15 15:19:16 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,7 +138,7 @@ int	validInput(std::string const &line)
 		;
 	else if (getExchangeFromLine(line, "|") < 0)
 		std::cout << "Error: not a positive number." << std::endl;
-	else if (getExchangeFromLine(line, "|") > 100)
+	else if (getExchangeFromLine(line, "|") > 1000)
 		std::cout << "Error: too large a number." << std::endl;
 	else if (getDateFromLine(line) == -1)
 		std::cout << "Error: date is not correct." << std::endl;

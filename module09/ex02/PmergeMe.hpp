@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:37:42 by franmart          #+#    #+#             */
-/*   Updated: 2023/09/20 16:54:46 by franmart         ###   ########.fr       */
+/*   Updated: 2023/09/25 11:04:52 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,29 @@
 #define PMERGEME_HPP
 
 # include <iostream>
-# include <list>
+# include <deque>
 # include <string>
 # include <vector>
 # include <sys/time.h>
+# include <algorithm>
+# include <limits.h>
+# include <iomanip>
+# include <unistd.h>
 
 # define ERR_INVALID_PARAMS 41
 # define ERR_INPUT_DUP 42
 # define ERR_INPUT_INVALID 43
 
+/* The vector is a lot faster than the deque because it's placed continuously in the
+ * memory, so when using the [] operator, it doesn't have to jump from block to block
+ * of memory, the element is just: element = vector[sizeof(int) * pos] */
+
 class PmergeMe
 {
 	private:
-		std::list<int>	  lst;
+		std::deque<int>	  deq;
 		std::vector<int>  vec;
-		long long		  lst_time;
+		long long		  deq_time;
 		long long		  vec_time;
 		int				  size;
 
@@ -41,7 +49,7 @@ class PmergeMe
 
 		void  fillContainers(char **argv);
 		void  mergeInsertSort(void);
-		void  sortList(void);
+		void  sortDeque(void);
 		void  sortVector(void);
 
 		void  printContainer(std::string const &context);
